@@ -14,5 +14,24 @@
 
 int         main()
 {
-  fonebuk   instance;
+  fonebuk * people = fonebuk[8];
+  std::string   line;
+  int           index;
+
+  while (line != "EXIT")
+  {
+    std::cout << "You can, ADD, SEARCH, or EXIT." << std::endl;
+    std::getline(std::cin, line);
+    if (line == "ADD")
+        fonebuk::add_contact();
+    else if (line == "SEARCH")
+    {
+        fonebuk::display_index();
+        std::getline(std::cin, line);
+        if ()
+    }
+    else if (line != "EXIT")
+      std::cout << "I'm sorry, I could not understand you. Try again." << std::endl;
+  }
+  return;
 }

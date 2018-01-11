@@ -19,7 +19,24 @@ public:
 
       fonebuk(void);
       ~fonebuk(void);
+      void	fonebuk::print_contact(void);
+      void  fonebuk::add_contact(void);
 
+      int           contact_number;
+      std::string   first_name;
+      std::string   last_name;
+      std::string   nickname;
+
+private:
+
+      std::string   _login;
+      std::string   _address;
+      std::string   _email;
+      std::string   _phone;
+      std::string   _birthday;
+      std::string   _fav_meal;
+      std::string   _underwear;
+      std::string   _secret;
 };
 
 #endif
