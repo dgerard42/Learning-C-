@@ -10,27 +10,29 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_H
-# define FRAGTRAP_H
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
+
+# include <iosstream>
 
 class	FragTrap
 {
 	private:
-		int			_hp;
-		int			_max_hp;
-		int			_energy;
-		int			_max_energy;
-		int			_level;
-		int			_attack_dmg;
-		int			_ranged_dmg;
-		int			_armor_rating;
+		unsigned int	_hp;
+		unsigned int	_max_hp;
+		unsigned int	_energy;
+		unsigned int	_max_energy;
+		unsigned int	_level;
+		unsigned int	_attack_dmg;
+		unsigned int	_ranged_dmg;
+		unsigned int	_armor_rating;
 
-		std::string	_name;
+		std::string		_name;
 
 	public:
-		FragTrap(std::string name);
-		FragTrapCopy(const FragTrap & obj);
-		~FragTrap(void);
+		FragTrap(std::string name); //constructor
+		FragTrapCopy(const FragTrap &obj); //copy constructor
+		~FragTrap(void); //destructor
 
 		rangedAttack(std::string const & target);
 		meleeAttack(std::string const & target);
