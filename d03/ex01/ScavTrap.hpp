@@ -31,15 +31,16 @@ class	ScavTrap
 
 	public:
 		ScavTrap(void); //constructor (should take no parameters)
-		ScavTrap(std::string const name); //alternative copy constructor
+		ScavTrap(std::string const name); //named constructor
 		ScavTrap(ScavTrap const &obj); //copy constructor
 		~ScavTrap(void); //destructor
 
-		void	rangedAttack(std::string const & target);
-		void	meleeAttack(std::string const & target);
-		void	takeDamage(unsigned int amount);
-		void	beRepaired(unsigned int amount);
-		void	challengeNewcomer(std::string const & target);
+		ScavTrap &	operator=(ScavTrap const &obj); //assignation operator
+		void		rangedAttack(std::string const & target);
+		void		meleeAttack(std::string const & target);
+		void		takeDamage(unsigned int amount);
+		void		beRepaired(unsigned int amount);
+		void		challengeNewcomer(std::string const & target);
 };
 
 # endif

@@ -22,6 +22,7 @@ int				main(){
 	robot_0.rangedAttack("ROWBOAT");
 	robot_0.meleeAttack("XATHRON, DESTROYER OF WORLDS");
 	robot_0.takeDamage(42);
+	robot_2 = robot_0;
 	robot_0.beRepaired(13);
 	FragTrap	robot_1  = robot_0;
 	robot_0.beRepaired(420);
@@ -34,6 +35,7 @@ int				main(){
 	robot_3.rangedAttack("ROWBOAT");
 	robot_3.meleeAttack("XATHRON, DESTROYER OF WORLDS");
 	robot_3.takeDamage(42);
+	robot_4 = robot_3;
 	robot_3.beRepaired(13);
 	ScavTrap	robot_5  = robot_3;
 	robot_3.beRepaired(420);

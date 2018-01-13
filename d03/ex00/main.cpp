@@ -21,8 +21,9 @@ int				main(){
 	robot_0.rangedAttack("ROWBOAT");
 	robot_0.meleeAttack("XATHRON, DESTROYER OF WORLDS");
 	robot_0.takeDamage(42);
+	robot_2 = robot_0;
 	robot_0.beRepaired(13);
-	FragTrap	robot_1  = robot_0;
+	FragTrap	robot_1 = robot_0;
 	robot_0.beRepaired(420);
 	robot_0.vaulthunter_dot_exe("WINTERGREEN");
 	robot_0.takeDamage(420);

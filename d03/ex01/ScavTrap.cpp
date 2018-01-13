@@ -44,6 +44,21 @@ ScavTrap::ScavTrap(ScavTrap const &obj) : _hp(obj._hp), _max_hp(obj._max_hp),
 	return;
 };
 
+ScavTrap &	ScavTrap::operator=(ScavTrap const & obj){
+	this->_hp = obj._hp;
+	this->_max_hp = obj._max_hp;
+	this->_energy = obj._energy;
+	this->_max_energy = obj._max_energy;
+	this->_level = obj._level;
+	this->_attack_dmg = obj._attack_dmg;
+	this->_ranged_dmg = obj._ranged_dmg;
+	this->_armor_rating = obj._armor_rating;
+	std::cout << "robot " << this->_name << " has been rebuilt";
+	this->_name = obj._name;
+	std::cout << " to be like " << this->_name << std::endl;
+	return *this;
+};
+
 void	ScavTrap::rangedAttack(std::string const & target){
 	std::cout << this->_name << " attacks " << target <<
 		" at range with a strength of " << this->_ranged_dmg <<

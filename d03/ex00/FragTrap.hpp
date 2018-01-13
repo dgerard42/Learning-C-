@@ -31,15 +31,16 @@ class	FragTrap
 
 	public:
 		FragTrap(void); //constructor (should take no parameters)
-		FragTrap(std::string const name); //alternative copy constructor
+		FragTrap(std::string const name); //named constructor
 		FragTrap(FragTrap const &obj); //copy constructor
 		~FragTrap(void); //destructor
 
-		void	rangedAttack(std::string const & target);
-		void	meleeAttack(std::string const & target);
-		void	takeDamage(unsigned int amount);
-		void	beRepaired(unsigned int amount);
-		void	vaulthunter_dot_exe(std::string const & target);
+		FragTrap &	operator=(FragTrap const &obj); //assignation operator
+		void		rangedAttack(std::string const & target);
+		void		meleeAttack(std::string const & target);
+		void		takeDamage(unsigned int amount);
+		void		beRepaired(unsigned int amount);
+		void		vaulthunter_dot_exe(std::string const & target);
 };
 
 # endif
