@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dgerard <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/11 19:26:14 by dgerard           #+#    #+#             */
-/*   Updated: 2018/01/11 19:26:16 by dgerard          ###   ########.fr       */
+/*   Created: 2018/01/12 16:17:39 by dgerard           #+#    #+#             */
+/*   Updated: 2018/01/12 16:17:40 by dgerard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
-# include <iosstream>
+# include <iostream>
 
-class	FragTrap
+class	ScavTrap
 {
 	private:
 		unsigned int	_hp;
@@ -30,14 +30,16 @@ class	FragTrap
 		std::string		_name;
 
 	public:
-		FragTrap(std::string name); //constructor
-		FragTrapCopy(const FragTrap &obj); //copy constructor
-		~FragTrap(void); //destructor
+		ScavTrap(void); //constructor (should take no parameters)
+		ScavTrap(std::string const name); //alternative copy constructor
+		ScavTrap(ScavTrap const &obj); //copy constructor
+		~ScavTrap(void); //destructor
 
-		rangedAttack(std::string const & target);
-		meleeAttack(std::string const & target);
-		takeDamage(unsigned int amount);
-		beRepaired(unsigned int amount);
+		void	rangedAttack(std::string const & target);
+		void	meleeAttack(std::string const & target);
+		void	takeDamage(unsigned int amount);
+		void	beRepaired(unsigned int amount);
+		void	challengeNewcomer(std::string const & target);
 };
 
 # endif
