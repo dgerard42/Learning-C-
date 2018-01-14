@@ -13,10 +13,14 @@
 #ifndef FALCON_HPP
 # define FALCON_HPP
 
-#include "space_ship.class.hpp"
+#include "game_env.class.hpp"
 
-class	falcon : public space_ship
+class	falcon : public env_obj
 {
+	protected:
+
+		unsigned int	_hp;
+
 	public:
 
 		falcon(void);
@@ -24,8 +28,8 @@ class	falcon : public space_ship
 		falcon &	operator=(falcon const &obj);
 		~falcon(void);
 
-		fire_lazer();
-		user_control();
+		// lazer &		fire_lazer(int const x, int const y);
+		void		user_control();
 };
 
 # endif

@@ -13,7 +13,7 @@
 #ifndef ASTEROID_HPP
 # define ASTEROID_HPP
 
-#include "env_obj.class.hpp"
+#include "game_env.class.hpp"
 
 class	asteroid : public env_obj
 {
@@ -23,8 +23,6 @@ class	asteroid : public env_obj
 		asteroid(asteroid const &obj);
 		asteroid &	operator=(asteroid const &obj);
 		~asteroid(void);
-
-		collision();
 };
 
 # endif

@@ -10,10 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef lazer_HPP
-# define lazer_HPP
+#ifndef LAZER_HPP
+# define LAZER_HPP
 
-#include "env_obj.class.hpp"
+#include "game_env.class.hpp"
 
 class	lazer : public env_obj
 {
@@ -23,8 +23,6 @@ class	lazer : public env_obj
 		lazer(lazer const &obj);
 		lazer &	operator=(lazer const &obj);
 		~lazer(void);
-
-		hits();
 };
 
 # endif

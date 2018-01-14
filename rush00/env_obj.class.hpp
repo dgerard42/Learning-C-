@@ -11,7 +11,9 @@
 /* ************************************************************************** */
 
 #ifndef ENV_OBJ_HPP
-# define env_obj_HPP
+# define ENV_OBJ_HPP
+
+#include "game_env.class.hpp"
 
 class	env_obj
 {
@@ -23,7 +25,6 @@ class	env_obj
 		int				_x;
 		int				_y;
 		char			_symbol;
-		// bool			_direction;
 
 	public:
 
@@ -32,7 +33,15 @@ class	env_obj
 		env_obj &	operator=(env_obj const &obj);
 		~env_obj(void);
 
-		move();
+		unsigned int	get_color(void);
+		unsigned int	get_size(void);
+		unsigned int	get_speed(void);
+		int 			get_x(void);
+		int 			get_y(void);
+		char			get_symbol(void);
+
+		void			set_x(int x);
+		void			set_y(int y);
 };
 
 # endif

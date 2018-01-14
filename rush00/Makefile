@@ -10,14 +10,18 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = FragTrap
+NAME = space_battle
 
 CC = clang++
 
 FLAGS = -Wall -Werror -Wextra
 
-SRCS =	main.cpp\
-		FragTrap.cpp\
+SRCS =	space_battle.cpp\
+		asteroid.class.cpp\
+		falcon.class.cpp\
+		env_obj.class.cpp\
+		game_env.class.cpp\
+		lazer.class.cpp\
 
 ODIR = ofiles
 

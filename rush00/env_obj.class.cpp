@@ -12,40 +12,59 @@
 
 # include "env_obj.hpp"
 
-env_obj::env_obj() : _level(1){
-
-	return;
+env_obj::env_obj() {
+	std::cout << "env_obj constructor called" <<  std::endl;
 };
 
-env_obj::env_obj(env_obj const &obj) : _hp(obj._hp), _max_hp(obj._max_hp),
-										_energy(obj._energy),
-										_max_energy(obj._max_energy),
-										_level(obj._level),
-										_attack_dmg(obj._attack_dmg),
-										_ranged_dmg(obj._ranged_dmg),
-										_armor_rating(obj._armor_rating),
-										_name(obj._name){
-	std::cout << "robot " << this->_name << " has been duplicated" << std::endl;
-	return;
+env_obj::env_obj(env_obj const &obj) : _color(obj._color), _size(_size),
+										_speed(obj._speed), _x(obj._x),
+										_y(obj._y), _symbol(obj._symbol) {
+	std::cout << "env_obj copy constructor called" << std::endl;
 };
 
 env_obj &	env_obj::operator=(env_obj const & obj){
-	this->_hp = obj._hp;
-	this->_max_hp = obj._max_hp;
-	this->_energy = obj._energy;
-	this->_max_energy = obj._max_energy;
-	this->_level = obj._level;
-	this->_attack_dmg = obj._attack_dmg;
-	this->_ranged_dmg = obj._ranged_dmg;
-	this->_armor_rating = obj._armor_rating;
-	std::cout << "robot " << this->_name << " has been born again as ";
-	this->_name = obj._name;
-	std::cout << this->_name << std::endl;
+	this->_color = obj._color;
+	this->_size = obj._size;
+	this->_speed = obj._speed;
+	this->_x = obj._x;
+	this->_y = obj._y;
+	this->_symbol = obj._symbol;
+	std::cout << "env_obj assignation operator called" << std::endl;
 	return *this;
 };
 
 env_obj::~env_obj(void){
-	std::cout << this->_name << "'s remains become a hip succulent planter at a local Gastropub"
-		<< std::endl;
-	return;
+	std::cout << "env_obj destructor called" << std::endl;
+};
+
+unsigned int	env_obj::get_color(void){
+	return this->_color;
+};
+
+unsigned int	env_obj::get_size(void){
+	return this->_size;
+};
+
+unsigned int	env_obj::get_speed(void){
+	return this->_speed;
+};
+
+int			env_obj::get_x(void){
+	return this->_x;
+};
+
+int			env_obj::get_y(void){
+	return this->_y;
+};
+
+char		env_obj::get_symbol(void){
+	return this->_symbol;
+};
+
+void			set_x(int x){
+	this->_x = x;
+};
+
+void			set_y(int y){
+	this->_y = y;
 };

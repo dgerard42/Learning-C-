@@ -1,34 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   space_ship.class.hpp                               :+:      :+:    :+:   */
+/*   asteroid.class.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dgerard <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/01/13 14:57:26 by dgerard           #+#    #+#             */
-/*   Updated: 2018/01/13 14:57:28 by dgerard          ###   ########.fr       */
+/*   Created: 2018/01/13 14:54:12 by dgerard           #+#    #+#             */
+/*   Updated: 2018/01/13 14:54:13 by dgerard          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SPACE_SHIP_HPP
-# define SPACE_SHIP_HPP
+#ifndef ASTEROID_HPP
+# define ASTEROID_HPP
 
-#include "env_obj.class.hpp"
+#include "game_env.class.hpp"
 
-class	space_ship : public env_obj
+class	asteroid : public env_obj
 {
-	protected:
-
-		unsigned int	_hp;
-
 	public:
 
-		space_ship(void);
-		space_ship(space_ship const &obj);
-		space_ship &	operator=(space_ship const &obj);
-		~space_ship(void);
-
-		collision();
+		asteroid(void);
+		asteroid(asteroid const &obj);
+		asteroid &	operator=(asteroid const &obj);
+		~asteroid(void);
 };
 
 # endif

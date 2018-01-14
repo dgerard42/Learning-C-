@@ -13,21 +13,26 @@
 #ifndef GAME_ENV_HPP
 # define GAME_ENV_HPP
 
-#include <curses.h>
+# include <iostream>
+# include <ncurses.h>
+# include "game_env.class.hpp"
+# include "env_obj.class.hpp"
+# include "falcon.class.hpp"
+# include "asteroid.class.hpp"
+# include "lazer.class.hpp"
 
+# define MAP_X		50
+# define MAP_Y		50
 # define MAX_OBS	25
-# define MAX_ENMY	25
-# define MAX_STAR	50
 
 class	game_env
 {
 	protected:
 
-		unsigned int	time;
-		unsigned int	frame;
-		asteroid*		obstacles[MAX_OBS];
-		space_ship*		enemies[MAX_ENMY];
-
+		unsigned int	_time;
+		unsigned int	_frame;
+		asteroid*		_obstacles[MAX_OBS];
+		//add a star array here if you have time
 
 	public:
 
@@ -36,15 +41,14 @@ class	game_env
 		game_env &	operator=(game_env const &obj);
 		~game_env(void);
 
-		curses_init();
-		render_frame();
-		get_obj_shape();
+		void	curses_init(void);
+		// render_frame();
+		// get_obj_shape();
 
-		move_objs(); //for each turn of time, according to speed, deconstruct those leaving
-		spawn_new_shit(); //randomizes what is coming onto the screen;
-		controls();
+		// move_objs(); //for each turn of time, according to speed, deconstruct those leaving
+		// spawn_new_shit(); //randomizes what is coming onto the screen;
 
-		check_collision();
+		// check_collision();
 
 };
 
