@@ -10,22 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "game_env.hpp"
+# include "game_env.class.hpp"
 
-game_env::game_env() {
+
+game_env::game_env() : _time(0), _frame(0) {
+	for (int i = 0; i < MAX_OBS; i++)
+		_obstacles[i] = NULL;
 	std::cout << "game_env constructor called" <<  std::endl;
 };
 
-game_env::game_env(game_env const &obj) : _time(obj._time), _frame(_frame),
-										_speed(obj._speed),
-										_obstacles(obj._obstacles) {
+game_env::game_env(game_env const &obj) : _time(obj._time), _frame(obj._frame){
+	*this = obj;
 	std::cout << "game_env copy constructor called" << std::endl;
 };
 
 game_env &	game_env::operator=(game_env const & obj){
 	this->_time = obj._time;
 	this->_frame = obj._frame;
-	this->_obstacles = obj._obstacles;
+	for (int i = 0; i < MAX_OBS; i++)
+		_obstacles[i] = obj._obstacles[i];
 	std::cout << "game_env assignation operator called" << std::endl;
 	return *this;
 };

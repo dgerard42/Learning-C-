@@ -10,10 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LAZER_HPP
-# define LAZER_HPP
+#ifndef LAZER_CLASS_HPP
+# define LAZER_CLASS_HPP
 
-#include "game_env.class.hpp"
+//#include "game_env.class.hpp"
 
 class	lazer : public env_obj
 {

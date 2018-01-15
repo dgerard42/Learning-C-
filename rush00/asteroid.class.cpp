@@ -13,15 +13,13 @@
 # include "asteroid.class.hpp"
 
 asteroid::asteroid() {
-	int index = std::rand() % (7 - 0 + 1);
-	int sizes[8] = {1, 22, 232, 2343, 3443, 122, 23432, 34543}; //fix this eventually
 	this->_color = COLOR_GREEN;
-	this->_size = sizes[index];
-	this->_speed = medium; //NaN
-	index = std::rand() % (49 - 0 + 1);
+	this->_size = 1;
+	this->_speed = 1;
+	int index = std::rand() % (49 - 0 + 1);
 	this->_x = index;
 	this->_y = 0;
-	this->_symbol = '#';
+	this->_symbol = '@';
 	std::cout << "asteroid constructor called" <<  std::endl;
 };
 

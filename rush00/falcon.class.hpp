@@ -10,10 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FALCON_HPP
-# define FALCON_HPP
+#ifndef FALCON_CLASS_HPP
+# define FALCON_CLASS_HPP
 
-#include "game_env.class.hpp"
+#include "env_obj.class.hpp"
+#include <ncurses.h>
+#include <iostream>
 
 class	falcon : public env_obj
 {

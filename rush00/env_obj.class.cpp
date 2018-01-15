@@ -10,15 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "env_obj.hpp"
+# include "env_obj.class.hpp"
 
 env_obj::env_obj() {
 	std::cout << "env_obj constructor called" <<  std::endl;
 };
 
-env_obj::env_obj(env_obj const &obj) : _color(obj._color), _size(_size),
-										_speed(obj._speed), _x(obj._x),
-										_y(obj._y), _symbol(obj._symbol) {
+env_obj::env_obj(env_obj const &obj) {
+	*this = obj;
 	std::cout << "env_obj copy constructor called" << std::endl;
 };
 
@@ -61,10 +60,10 @@ char		env_obj::get_symbol(void){
 	return this->_symbol;
 };
 
-void			set_x(int x){
+void			env_obj::set_x(int x){
 	this->_x = x;
 };
 
-void			set_y(int y){
+void			env_obj::set_y(int y){
 	this->_y = y;
 };

@@ -10,10 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ENV_OBJ_HPP
-# define ENV_OBJ_HPP
+#ifndef ENV_OBJ_CLASS_HPP
+# define ENV_OBJ_CLASS_HPP
 
-#include "game_env.class.hpp"
+//#include "game_env.class.hpp"
+#include <iostream>
+#include <ncurses.h>
 
 class	env_obj
 {

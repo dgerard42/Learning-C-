@@ -15,7 +15,7 @@
 lazer::lazer(){
 	this->_color = COLOR_RED;
 	this->_size = 1;
-	this->_speed = fastest; //NaN
+	this->_speed = 3;
 	int index = std::rand() % (49 - 0 + 1);
 	this->_x = index;
 	this->_y = 0;
@@ -26,7 +26,7 @@ lazer::lazer(){
 lazer::lazer(int x, int y) : _x(x), _y(y){
 	this->_color = COLOR_RED;
 	this->_size = 1;
-	this->_speed = fastest; //NaN
+	this->_speed = 3;
 	this->_symbol = '|';
 	std::cout << "lazer constructor called" <<  std::endl;
 };

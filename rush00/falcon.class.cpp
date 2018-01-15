@@ -14,8 +14,8 @@
 
 falcon::falcon(){
 	this->_color = COLOR_MAGENTA;
-	this->_size = 35;
-	this->_speed = medium hi; //NaN
+	this->_size = 1;
+	this->_speed = 2;
 	int index = std::rand() % (49 - 0 + 1);
 	this->_x = index;
 	this->_y = 0;

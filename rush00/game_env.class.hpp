@@ -10,15 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GAME_ENV_HPP
-# define GAME_ENV_HPP
+#ifndef GAME_ENV_CLASS_HPP
+# define GAME_ENV_CLASS_HPP
 
 # include <iostream>
 # include <ncurses.h>
-# include "game_env.class.hpp"
+# include "asteroid.class.hpp"
 # include "env_obj.class.hpp"
 # include "falcon.class.hpp"
-# include "asteroid.class.hpp"
 # include "lazer.class.hpp"
 
 # define MAP_X		50
@@ -31,7 +30,7 @@ class	game_env
 
 		unsigned int	_time;
 		unsigned int	_frame;
-		asteroid*		_obstacles[MAX_OBS];
+		asteroid* 		_obstacles[MAX_OBS];
 		//add a star array here if you have time
 
 	public:
