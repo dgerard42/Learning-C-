@@ -13,13 +13,14 @@
 #ifndef LAZER_CLASS_HPP
 # define LAZER_CLASS_HPP
 
-//#include "game_env.class.hpp"
+#include "game_env.class.hpp"
 
 class	lazer : public env_obj
 {
 	public:
 
 		lazer(void);
+		lazer(int x, int y);
 		lazer(lazer const &obj);
 		lazer &	operator=(lazer const &obj);
 		~lazer(void);

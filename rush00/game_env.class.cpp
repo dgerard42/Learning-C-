@@ -12,7 +12,6 @@
 
 # include "game_env.class.hpp"
 
-
 game_env::game_env() : _time(0), _frame(0) {
 	for (int i = 0; i < MAX_OBS; i++)
 		_obstacles[i] = NULL;
@@ -38,9 +37,9 @@ game_env::~game_env(void){
 };
 
 void	game_env::curses_init(void){
-	initscr(void);
-	clear(void);
+	initscr();
+	clear();
 	printw("NCURSES INITIALIZED. PRESS ANY KEY TO CONT.\n");
-	getch(void);
-	endwin(void);
+	getch();
+	endwin();
 };

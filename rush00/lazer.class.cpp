@@ -23,7 +23,9 @@ lazer::lazer(){
 	std::cout << "lazer constructor called" <<  std::endl;
 };
 
-lazer::lazer(int x, int y) : _x(x), _y(y){
+lazer::lazer(int x, int y){
+	this->set_x(x);
+	this->set_y(y);
 	this->_color = COLOR_RED;
 	this->_size = 1;
 	this->_speed = 3;
