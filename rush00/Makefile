@@ -6,22 +6,22 @@
 #    By: dgerard <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 17:24:50 by dgerard           #+#    #+#              #
-#    Updated: 2018/01/10 16:38:44 by daniella         ###   ########.fr        #
+#    Updated: 2018/01/14 20:33:38 by esterna          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = space_battle
+NAME = ft_retro
 
 CC = clang++
 
 FLAGS = -Wall -Werror -Wextra
 
-SRCS =	space_battle.cpp\
-		asteroid.class.cpp\
+SRCS =	asteroid.class.cpp\
 		falcon.class.cpp\
 		env_obj.class.cpp\
 		game_env.class.cpp\
 		lazer.class.cpp\
+		main.cpp\
 
 ODIR = ofiles
 
@@ -35,7 +35,7 @@ all: $(NAME)
 
 $(NAME): $(OFILES)
 	@echo "\033[32m[.o files created ( ͡° ͜ʖ ͡°)]\033[0m"
-	@$(CC) $(FLAGS) -o $@ $(OFILES)
+	@$(CC) $(FLAGS) -o $@ $(OFILES) -lncurses
 	@echo "\033[32m[executable created ( ͡° ͜ʖ ͡°)]\033[0m"
 
 $(OFILES): | $(ODIR)

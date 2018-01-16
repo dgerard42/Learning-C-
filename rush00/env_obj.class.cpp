@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   env_obj.cpp                                        :+:      :+:    :+:   */
+/*   env_obj.class.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dgerard <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/13 14:55:30 by dgerard           #+#    #+#             */
-/*   Updated: 2018/01/13 14:55:31 by dgerard          ###   ########.fr       */
+/*   Updated: 2018/01/14 20:34:43 by esterna          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "env_obj.class.hpp"
+#include "env_obj.class.hpp"
 
 env_obj::env_obj() {
 	std::cout << "env_obj constructor called" <<  std::endl;
@@ -67,3 +67,24 @@ void			env_obj::set_x(int x){
 void			env_obj::set_y(int y){
 	this->_y = y;
 };
+
+int			env_obj::get_dirx(void){
+	return this->_x;
+};
+
+int			env_obj::get_diry(void){
+	return this->_y;
+};
+
+void			env_obj::set_dirx(int x){
+	this->_x = x;
+};
+
+void			env_obj::set_diry(int y){
+	this->_y = y;
+};
+
+void			env_obj::move(void){
+	this->_y += this->_diry;
+	this->_x += this->_dirx;
+}

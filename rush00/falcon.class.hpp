@@ -6,7 +6,7 @@
 /*   By: dgerard <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/13 13:51:04 by dgerard           #+#    #+#             */
-/*   Updated: 2018/01/13 13:51:06 by dgerard          ###   ########.fr       */
+/*   Updated: 2018/01/14 20:30:11 by esterna          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FALCON_CLASS_HPP
 
 #include "env_obj.class.hpp"
+#include "lazer.class.hpp"
 #include <ncurses.h>
 #include <iostream>
 
@@ -30,8 +31,7 @@ class	falcon : public env_obj
 		falcon &	operator=(falcon const &obj);
 		~falcon(void);
 
-		// lazer &		fire_lazer(int const x, int const y);
-		void		user_control();
+		lazer &		fire_lazer(int const x, int const y);
 };
 
 # endif

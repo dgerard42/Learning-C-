@@ -6,7 +6,7 @@
 /*   By: dgerard <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/13 14:54:05 by dgerard           #+#    #+#             */
-/*   Updated: 2018/01/13 14:54:06 by dgerard          ###   ########.fr       */
+/*   Updated: 2018/01/14 18:07:20 by esterna          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,9 @@ asteroid::asteroid() {
 	this->_speed = 1;
 	int index = std::rand() % (49 - 0 + 1);
 	this->_x = index;
-	this->_y = 0;
+	this->_y = (std::rand() % 100) * -1;
+	this->_dirx = 0;
+	this->_diry = 1;
 	this->_symbol = '@';
 	std::cout << "asteroid constructor called" <<  std::endl;
 };
